@@ -1,0 +1,18 @@
+import torch
+
+FRAME_HEIGHT = 64
+FRAME_WIDTH = 64
+
+TIME_STEPS = 20
+
+INPUT_SIZE = FRAME_HEIGHT * FRAME_WIDTH
+HIDDEN_SIZE = 256
+OUTPUT_SIZE = 3
+
+ALERT_CONFIDENCE_THRESHOLD = 0.65
+
+SIMULATION_EVENTS_PER_BATCH = 500
+
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+
+MODEL_PATH = "hawkeye_snn.pth"
